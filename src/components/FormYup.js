@@ -39,6 +39,7 @@ const FormYup = () => {
             </header>
             <div className="arrow-down"></div>
             <form action="POST" className="form__form" onSubmit={handleSubmit(onSubmit)} data-netlify='true' name='formProfileInformation' netlify>
+                <input type="hidden" name='form-name' value='formProfileInformation'/>
                 <label className='hidden' htmlFor="firstName">Fornavn</label>
                 <input 
                     {...register('firstName')}
