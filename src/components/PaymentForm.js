@@ -48,7 +48,7 @@ const PaymentForm = () => {
                 <p>Tak for din tilmelding, {userData.firstName}</p>
                 <p>Du er ved at oprette en profil med emailadressen: {userData.email}</p>
             </div>
-            <form action="" className="Payment-form__form" onSubmit={handleSubmit(onSubmit)} data-netlify='true' name='formPaymentInformation'>
+            <form action="POST" className="Payment-form__form" onSubmit={handleSubmit(onSubmit)} data-netlify='true' name='formPaymentInformation'>
                 <input 
                     {...register('cardNumber')}
                     className='form__input' 
