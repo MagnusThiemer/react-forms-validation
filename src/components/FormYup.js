@@ -28,7 +28,16 @@ const FormYup = () => {
     });
 
     const onSubmit = (data) => {
-        setUserData(data);
+        setUserData(data)
+
+        let myForm = document.getElementById("formProfileInformation");
+        let formData = new FormData(myForm);
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString(),
+        })
+
         navigate('/paymentPage')
     }
 
@@ -38,7 +47,7 @@ const FormYup = () => {
                 <h2>Yup form validering</h2>
             </header>
             <div className="arrow-down"></div>
-            <form action="POST" className="form__form" onSubmit={handleSubmit(onSubmit)} data-netlify='true' name='formProfileInformation' data-netlify-honeypot='bot-field'>
+            <form action="POST" id='formProfileInformation' className="form__form" onSubmit={handleSubmit(onSubmit)} data-netlify='true' name='formProfileInformation' data-netlify-honeypot='bot-field'>
                 <input type="hidden" name='form-name' value='formProfileInformation'/>
                 <label className='hidden' htmlFor="firstName">Fornavn</label>
                 <input 
