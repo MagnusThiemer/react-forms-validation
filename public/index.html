@@ -28,7 +28,48 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <form action="POST" className="form__form hidden" data-netlify='true' name='formProfileInformation' netlify>
+        <label className='hidden' htmlFor="firstName">Fornavn</label>
+        <input 
+            name="firstName" 
+            type="text" 
+            placeholder="Fornavn" 
+            className="form__input"/>
+        <label className='hidden' htmlFor="lastName">Efternavn</label>
+        <input 
+            name="lastName" 
+            type="text" 
+            placeholder="Efternavn" 
+            className="form__input"/>
+        <label className='hidden' htmlFor="email">Email</label>
+        <input 
+            name="email" 
+            type="text" 
+            placeholder="Email" 
+            className="form__input"/>
+        <label className='hidden' htmlFor="confirmEmail">Bekræft email</label>
+        <input 
+            name="confirmEmail" 
+            type="text" 
+            placeholder="Bekræft email" 
+            className="form__input"/>
+        <label className='hidden' htmlFor="password">Kodeord</label>
+        <input 
+            name="password" 
+            type="password" 
+            placeholder="Kodeord" 
+            className="form__input"/>
+        <div className="form__checkbox">
+            <input 
+                name="acceptTerms" 
+                type="checkbox" 
+                className=""/>
+            <label htmlFor="conditions2">Jeg accepterer Zetlands medlemsvilkår, herunder at Zetland må sende mig tilbud.</label>
+        </div>
+        <input type='submit' className="form__button" defaultValue='Videre'/>
+      </form>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
