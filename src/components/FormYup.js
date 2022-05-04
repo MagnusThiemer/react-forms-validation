@@ -38,7 +38,7 @@ const FormYup = () => {
                 <h2>Yup form validering</h2>
             </header>
             <div className="arrow-down"></div>
-            <form action="POST" className="form__form" onSubmit={handleSubmit(onSubmit)} data-netlify='true' name='formProfileInformation' netlify>
+            <form action="POST" className="form__form" onSubmit={handleSubmit(onSubmit)} data-netlify='true' name='formProfileInformation' data-netlify-honeypot='bot-field'>
                 <input type="hidden" name='form-name' value='formProfileInformation'/>
                 <label className='hidden' htmlFor="firstName">Fornavn</label>
                 <input 
