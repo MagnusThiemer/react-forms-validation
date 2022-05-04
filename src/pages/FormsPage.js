@@ -4,7 +4,7 @@ import FormYup from "../components/FormYup";
 const FormsPage = () => {
     return ( 
         <>
-            <Form />
+            {/* <Form /> */}
             <FormYup /> 
         </>
      );
